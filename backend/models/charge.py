@@ -1,11 +1,7 @@
 class Charge:
-    def __init__(self, name, weight, value):
-        self.name = name
+    def __init__(self, weight, value):
         self.weight = weight
         self.value = value
-
-    def get_name(self) -> str:
-        return self.name
 
     def get_weight(self) -> int:
         return self.weight

@@ -1,6 +1,6 @@
 # Final_Zelda:SedexOfTime
 
-<img src="Assets/icon.png" alt="drawing" width="300"/>
+<!-- <img src="Assets/icon.png" alt="drawing" width="300"/> -->
 
 **Número da Lista**: X<br>
 **Conteúdo da Disciplina**: Final<br>
