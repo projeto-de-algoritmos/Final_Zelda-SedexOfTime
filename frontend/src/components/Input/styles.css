@@ -1,0 +1,26 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+.inputArea{
+  width: 200px;
+  margin-top: 3px;
+  padding: 10px 0 10px 3px;
+  
+  border: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  
+  font-size: 11px;
+}
+.inputTitle{
+  text-align: left;
+}
+
+.errorMessage{
+  font-size: 12px;
+  color: #f44336;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 2px;
+}

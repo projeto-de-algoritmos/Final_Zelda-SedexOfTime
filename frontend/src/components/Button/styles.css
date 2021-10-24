@@ -1,0 +1,21 @@
+.addButton{
+  padding: 15px;
+  width: 150px;
+
+  border-radius: 20px;
+  border-style: solid;
+  border-style: none;
+
+  background-color: #04AA6D;
+
+  color: white;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.addButton:active{
+  background-color: #00994C;
+}
+.addButton:hover{
+  cursor: pointer;
+}

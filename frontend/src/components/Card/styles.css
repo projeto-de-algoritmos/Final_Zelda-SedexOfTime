@@ -1,0 +1,21 @@
+.card{
+  text-align: center;
+  width: 400px;
+  padding: 20px;
+  border: solid #008080 1px;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.deleteBtn{
+  background-color: #f44336;
+  padding: 0 4px 0 4px;
+  border-radius: 5px;
+  border-style: solid;
+  margin-left: 10px;
+}
+.deleteBtn:active{
+  background-color: #c9756f;
+}
