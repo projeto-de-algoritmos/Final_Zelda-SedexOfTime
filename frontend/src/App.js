@@ -66,6 +66,17 @@ function App() {
         <form key={0} onSubmit={handleSubmit(onSubmit)}>
             <div className="inputField">
                 <Input 
+                    register={register("nome", {
+                    validate: value => !answers.some((item)=>item.nome===value) || 'Produto já existe!', 
+                    required: 'Campo obrigatório!'
+                    })} 
+                    inputPlaceholder = "Nome do produto" 
+                    inputTitle="Nome do produto"  
+                    type="text" 
+                    error={errors.nome}>
+                </Input>
+
+                <Input 
                 register={register("peso", {
                     validate: value => value > 0 || 'Peso inválido!', 
                     required: 'Campo obrigatório!'

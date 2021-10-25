@@ -5,6 +5,7 @@ class ChargeList:
     def __init__(self, charge_list, max_weight):
         self.charge_list = [
             Charge(
+                str(charge['nome']),
                 int(charge['peso']),
                 int(charge['valor']))
             for charge in charge_list]
@@ -27,6 +28,7 @@ class ChargeList:
                 return selected
             elif charge.get_weight() <= self.max_weight:
                 selected.append({
+                                 'nome': charge.get_name(),
                                  'peso': charge.get_weight(),
                                  'valor': charge.get_value(),
                                  'porcentagem': 1})
@@ -34,6 +36,7 @@ class ChargeList:
             elif self.max_weight > 0:
                 variable = self.max_weight / charge.get_weight()
                 selected.append({
+                                 'nome': charge.get_name(),
                                  'peso': charge.get_weight(),
                                  'valor': charge.get_value(),
                                  'porcentagem': variable})

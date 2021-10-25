@@ -6,7 +6,7 @@ function Card({nome, peso, valor, deleteCard, porcentagem}){
   return(
     <div className="card" > 
     {/* {`${nome} ${peso} ${valor}`} */}
-    {/* <span><strong>Nome:</strong> {nome}</span> */}
+    <span><strong>Nome:</strong> {nome}</span>
     <span><strong>Peso:</strong> {peso} kg</span>
     <span><strong>Valor:</strong> {valor} rupes</span>
     { porcentagem ? 
