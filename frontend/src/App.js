@@ -59,6 +59,7 @@ function App() {
 
     return (
     <>
+    <h1 class="form">Zelda: Sedex of Time</h1>
     <div className='logo'>
         <img src={logo} alt="icon" />
     </div>
