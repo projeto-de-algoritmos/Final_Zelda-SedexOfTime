@@ -1,0 +1,19 @@
+origem,destino,peso
+Lon Lon Ranch,Castle Town,2
+Lon Lon Ranch,Kakarito Village,6
+Lon Lon Ranch,Zora River,10
+Lon Lon Ranch,The Lost Woods,12
+Lon Lon Ranch,Kokiri Forest,6
+Lon Lon Ranch,Lake Hylia,10
+Lon Lon Ranch,Gerudo Valley,15
+Castle Town,Hyrule Castle,3
+Castle Town,Kakarito Village,2
+Kakarito Village,Zoras Domain,7
+Zoras Domain, Zora River,4
+The Lost Woods,Zora River,13
+The Lost Woods,Deku Tree,11
+The Lost Woods,Kokiri Forest,5
+Kokiri Forest,Deku Tree,2
+Gerudo Valley,Lake Hylia,18
+Gerudo Valley,Gerudo Fortress,7
+Gerudo Fortress,Desert Colossus,4

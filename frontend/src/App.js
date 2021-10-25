@@ -6,32 +6,34 @@ import Select from 'react-select'
 import { useState} from 'react';
 import { useForm } from "react-hook-form";
 import './styles/global.css';
-import logo from './assets/map_default.png';
+import logoDefault from './assets/map_default.png';
 
 function App() {
 
     const [answers, setAnswers] = useState([]);
     const [city, setCity] = useState([]);
+    const [logo, setLogo] = useState(logoDefault);
     const { register, handleSubmit, reset, formState:{errors} } = useForm();
     const {
         register: register1,
         formState: { errors: errors1 },
         handleSubmit: handleSubmit1,
     } = useForm();
-const cities = [
-{ value: 'Castle Town', label: 'Castle Town' },
-{ value: 'Hyrule Castle', label: 'Hyrule Castle' },
-{ value: 'Kakarito Village', label: 'Kakarito Village' },
-{ value: 'Zoras Domain', label: 'Zoras Domain' },
-{ value: 'Zora River', label: 'Zora River' },
-{ value: 'The Lost Woods', label: 'The Lost Woods' },
-{ value: 'Deku Tree', label: 'Deku Tree' },
-{ value: 'Kokiri Forest', label: 'Kokiri Forest' },
-{ value: 'Lake Hylia', label: 'Lake Hylia' },
-{ value: 'Gerudo Valley', label: 'Gerudo Valley' },
-{ value: 'Gerudo Fortress', label: 'Gerudo Fortress' },
-{ value: 'Desert Colossus', label: 'Desert Colossus' },
-]
+
+    const cities = [
+    { value: 'Castle Town', label: 'Castle Town' },
+    { value: 'Hyrule Castle', label: 'Hyrule Castle' },
+    { value: 'Kakarito Village', label: 'Kakarito Village' },
+    { value: 'Zoras Domain', label: 'Zoras Domain' },
+    { value: 'Zora River', label: 'Zora River' },
+    { value: 'The Lost Woods', label: 'The Lost Woods' },
+    { value: 'Deku Tree', label: 'Deku Tree' },
+    { value: 'Kokiri Forest', label: 'Kokiri Forest' },
+    { value: 'Lake Hylia', label: 'Lake Hylia' },
+    { value: 'Gerudo Valley', label: 'Gerudo Valley' },
+    { value: 'Gerudo Fortress', label: 'Gerudo Fortress' },
+    { value: 'Desert Colossus', label: 'Desert Colossus' },
+    ]
 
     function onSubmit (data){
         setAnswers([...answers,data]);
@@ -46,9 +48,10 @@ const cities = [
         }
         console.log(reqBody);
         const headers = {'content-type': 'application/json'}     
-        axios.post('http://127.0.0.1:5000/charge/', reqBody, headers)     
+        axios.post('http://127.0.0.1:5000/knapsack/', reqBody, headers)     
             .then(function (response) {       
                 setAnswers(response.data.data);
+                setLogo(`data:image/jpeg;base64,${response.data.image}`)
                 console.log(response.data.data);     })
             .catch(error => {       
                 console.log(error)   })
