@@ -19,15 +19,15 @@ Malon é a proprietária do Lon Lon Ranch e gostaria de otimizar as entregas que
 
 ### Screenshot 1
 
-<!-- <img src="Assets/print1.png" alt="drawing" /> -->
+<img src="static/print1.png" alt="drawing" />
 
 ### Screenshot 2
 
-<!-- <img src="Assets/print2.png" alt="drawing" /> -->
+<img src="static/print2.png" alt="drawing" />
 
 ### Screenshot 3
 
-<!-- <img src="Assets/print3.png" alt="drawing" /> -->
+<img src="static/print3.png" alt="drawing" />
 
 ## Instalação 
 **Linguagem**: Python e JS<br>
@@ -36,15 +36,11 @@ Malon é a proprietária do Lon Lon Ranch e gostaria de otimizar as entregas que
 ### Backend
 
 ``` bash
-cd Backend/
+pip install flask pandas flask_cors
 ```
 
 ``` bash
-pip install flask
-```
-
-``` bash
-python main.py
+python backend/main.py
 ```
 
 ### Frontend
@@ -60,9 +56,4 @@ npm install
 ``` bash
 npm start
 ```
-## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
 
