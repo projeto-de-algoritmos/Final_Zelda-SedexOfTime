@@ -104,8 +104,6 @@ def render_knapsack():
         for i in points:
             cv2.line(image, i[0], i[1], (0,0,255), 2)
 
-        # new_image_name = "path_" + str(time.time()) + ".png"
-        # cv2.imwrite("./" + new_image_name, image)
         image_b64 = base64.b64encode(cv2.imencode('.png', image)[1]).decode()
 
         result = {'data': charge_list.knapsack(), 'image': image_b64}
