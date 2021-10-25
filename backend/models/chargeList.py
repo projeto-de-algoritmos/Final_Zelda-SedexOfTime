@@ -11,17 +11,39 @@ class ChargeList:
             for charge in charge_list]
         self.max_weight = int(max_weight)
 
-    def bubbleSort_charge(self):
-        for passnum in range(len(self.charge_list) - 1, 0, -1):
-            for i in range(passnum):
-                if self.charge_list[i].get_value_per_weight(
-                ) < self.charge_list[i + 1].get_value_per_weight():
-                    temp = self.charge_list[i]
-                    self.charge_list[i] = self.charge_list[i + 1]
-                    self.charge_list[i + 1] = temp
+    def compareItems(self,itemA, itemB):
+        return itemA.get_value_per_weight() > itemB.get_value_per_weight()
+
+    def mergeSort(self, arr):
+        if len(arr) > 1:
+            mid = len(arr)//2
+            left = arr[:mid]
+            right = arr[mid:]
+            self.mergeSort(left)
+            self.mergeSort(right)
+            i,j,k = (0, 0, 0)
+
+            while i < len(left) and j < len(right):
+                if self.compareItems(left[i], right[j]):
+                    arr[k] = left[i]
+                    i += 1
+                else:
+                    arr[k] = right[j]
+                    j += 1
+
+                k += 1
+
+            while i < len(left):
+                arr[k] = left[i]
+                i += 1
+                k += 1
+            while j < len(right):
+                arr[k] = right[j]
+                j += 1
+                k += 1
 
     def knapsack(self):
-        self.bubbleSort_charge()
+        self.mergeSort(self.charge_list)
         selected = []
         for charge in self.charge_list:
             if self.max_weight == 0:
